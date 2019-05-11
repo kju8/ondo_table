@@ -28,6 +28,7 @@
                     return `<span>${header.symbol}${value} (${count} pattern)</span>`;
                 },
                 columns: [
+                    {formatter:"responsiveCollapse", width:30, minWidth:30, align:"center", resizable:false, headerSort:false}
                     { title: "Level", field: "level", width: 100, resizable: false,
                         formatter: function(cell, formatterParams, onRendered) {
                             return header.symbol + cell.getValue();
@@ -66,7 +67,7 @@
                             return value;
                         },
                     },
-                    { title: "Comment", field: "comment", minWidth: 150, headerSort:false, resizable: false, formatter: "html"},
+                    { title: "Comment", field: "comment", minWidth: 10000, headerSort:false, resizable: false, formatter: "html"},
                 ]
             });
 

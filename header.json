@@ -1,5 +1,6 @@
 {
-    "name" : "Sack 差分表",
-    "symbol" : "S",
-    "data_url" : "https://www.gaftalk.com/pattern_table/data.json"
+   "data_url" : "body.json",
+   "last_update" : "2019/05/11",
+   "name" : "音頭難易度表",
+   "symbol" : "℃"
 }

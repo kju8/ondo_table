@@ -24,6 +24,7 @@
                 layout: "fitColumns",
                 groupBy: "level",
                 responsiveLayout:"collapse",
+                responsiveLayoutCollapseStartOpen:false,
                 groupHeader: function(value, count, data, group){
                     return `<span>${header.symbol}${value} (${count} pattern)</span>`;
                 },
@@ -34,7 +35,7 @@
                             return header.symbol + cell.getValue();
                         },
                     },
-                    { title: "Name", field: "title", minWidth: 150, headerSort:false, resizable: false, variableHeight:true,
+                    { title: "Name", field: "title", minWidth: 1, headerSort:false, resizable: false, variableHeight:true,
                         formatter: function(cell, formatterParams, onRendered) {
                             cell.getElement().style.whiteSpace = "pre-wrap";
                             const value = cell.getValue();
@@ -67,8 +68,24 @@
                             return value;
                         },
                     },
-                    { title: "Comment", field: "comment", minWidth: 10000, headerSort:false, resizable: false, formatter: "html"},
-                ]
+                    { title: "Original Title", field: "original_title", minWidth: 10000, headerSort:false, resizable: false},
+                    { title: "BPM Ratio", field: "bpm_ratio", minWidth: 10000, headerSort:false, resizable: false},
+                    { title: "Comment", field: "html_comment", minWidth: 10000, headerSort:false, resizable: false, formatter: "html"},
+                ],
+                responsiveLayoutCollapseFormatter:function(data){
+                    //data - an array of objects containing the column title and value for each cell
+                    var list = document.createElement("ul");
+
+                    data.forEach(function(col){
+                        if(col.value != ""){
+                            let item = document.createElement("li");
+                            item.innerHTML = "<strong>" + col.title + "</strong> - " + col.value;
+                            list.appendChild(item);
+                        }
+                    });
+
+                    return Object.keys(data).length ? list : "";
+                }
             });
 
             table.setData("./data.json");

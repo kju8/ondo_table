@@ -1,7 +1,9 @@
 [
   {
     "artist": "ZUN (Arr.sun3)",
-    "comment": "1:2",
+    "comment": "原曲 Ancient Memory\nBPM比　1:2",
+    "original_title": "Ancient Memory",
+    "bpm_ratio": "1:2",
     "level": "1",
     "lr2_bmsid": "120710",
     "md5": "243ff38f5a948d93e8eb0ab0fa323227",
@@ -12,7 +14,9 @@
   },
   {
     "artist": "SHIKI",
-    "comment": "1:2",
+    "comment": "原曲 BABYLON\nBPM比　1:2",
+    "original_title": "BABYLON",
+    "bpm_ratio": "1:2",
     "level": "1",
     "lr2_bmsid": "121068",
     "md5": "c4db86f5d95719c49992b2c5745b76be",
@@ -23,7 +27,9 @@
   },
   {
     "artist": "oxygen",
-    "comment": "",
+    "comment": "BPM比 約2.46:1",
+    "original_title": "Cable boy",
+    "bpm_ratio": "約2.46:1",
     "level": "1",
     "lr2_bmsid": "11284",
     "md5": "95aec3dcbca525b56e3ed09c29d9f2f3",
@@ -112,6 +118,7 @@
   {
     "artist": "wonderland*material(s)",
     "comment": "隠し譜面（フォルダ内のrar.wavの拡張子をzipにして解凍）",
+    "html_comment": "隠し譜面（フォルダ内のrar.wavの拡張子をzipにして解凍）",
     "level": "1",
     "lr2_bmsid": "6461",
     "md5": "39b3b80f3c6e63f1dac66eb8f77fbcef",

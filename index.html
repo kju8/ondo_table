@@ -77,7 +77,7 @@
                     var list = document.createElement("ul");
 
                     data.forEach(function(col){
-                        if(col.value != ""){
+                        if(col.value != "" && col.value != undefined){
                             let item = document.createElement("li");
                             item.innerHTML = "<strong>" + col.title + "</strong> - " + col.value;
                             list.appendChild(item);

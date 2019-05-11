@@ -23,16 +23,17 @@
                 height:"99%",
                 layout: "fitColumns",
                 groupBy: "level",
+                responsiveLayout:"collapse",
                 groupHeader: function(value, count, data, group){
                     return `<span>${header.symbol}${value} (${count} pattern)</span>`;
                 },
                 columns: [
-                    { title: "Level", field: "level", width: 80, resizable: false,
+                    { title: "Level", field: "level", width: 100, resizable: false,
                         formatter: function(cell, formatterParams, onRendered) {
                             return header.symbol + cell.getValue();
                         },
                     },
-                    { title: "Name", field: "title", headerSort:false, resizable: false, variableHeight:true,
+                    { title: "Name", field: "title", minWidth: 150, headerSort:false, resizable: false, variableHeight:true,
                         formatter: function(cell, formatterParams, onRendered) {
                             cell.getElement().style.whiteSpace = "pre-wrap";
                             const value = cell.getValue();
@@ -65,16 +66,8 @@
                             return value;
                         },
                     },
-                    { title: "Comment", field: "comment", headerSort:false, resizable: false,
-                        formatter: function(cell, formatterParams, onRendered) {
-                            cell.getElement().style.whiteSpace = "pre-wrap";
-                            return cell.getValue();
-                        }, tooltip:true
-                    },
-                ],
-                tooltips:function(cell){
-                    return cell.getValue();
-                },
+                    { title: "Comment", field: "comment", minWidth: 150, headerSort:false, resizable: false, formatter: "html"},
+                ]
             });
 
             table.setData("./data.json");

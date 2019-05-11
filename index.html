@@ -65,8 +65,16 @@
                             return value;
                         },
                     },
-                    { title: "Comment", field: "comment", formatter:"textarea", headerSort:false, resizable: false , formatter:"html"},
-                ]
+                    { title: "Comment", field: "comment", headerSort:false, resizable: false,
+                        formatter: function(cell, formatterParams, onRendered) {
+                            cell.getElement().style.whiteSpace = "pre-wrap";
+                            return cell.getValue();
+                        }, tooltip:true
+                    },
+                ],
+                tooltips:function(cell){
+                    return cell.getValue();
+                },
             });
 
             table.setData("./data.json");

@@ -18,7 +18,7 @@
 
     <script>
         const empty_text = function(text){
-            return text && String(text).replace(/&nbsp;|&nbsp/g ,' ').match(/\S/g);
+            return !(text && String(text).replace(/&nbsp;|&nbsp/g ,' ').match(/\S/g));
         }
 
         const request = new XMLHttpRequest();
@@ -82,7 +82,7 @@
                     var list = document.createElement("ul");
 
                     data.forEach(function(col){
-                        if(empty_text(col.value)){
+                        if(!empty_text(col.value)){
                             let item = document.createElement("li");
                             item.innerHTML = "<strong>" + col.title + "</strong> - " + col.value;
                             list.appendChild(item);
@@ -95,6 +95,7 @@
                     var data = row.getData();
 
                     if(empty_text(data.original_title) && empty_text(data.bpm_ratio) && empty_text(data.html_comment)){
+                        console.log("check Through");
                         data.getCell("collapse").getElement().innerHTML = "";
                     }
                 }

@@ -17,6 +17,10 @@
     </body>
 
     <script>
+        const empty_text = function(text){
+            return text && String(text).replace(/&nbsp;|&nbsp/g ,' ').match(/\S/g);
+        }
+
         const request = new XMLHttpRequest();
         request.onload = objs => {
             const header = JSON.parse(request.responseText);
@@ -78,7 +82,7 @@
                     var list = document.createElement("ul");
 
                     data.forEach(function(col){
-                        if(col.value && String(col.value).replace(/&nbsp;|&nbsp/g ,' ').match(/\S/g)){
+                        if(empty_text(col.value)){
                             let item = document.createElement("li");
                             item.innerHTML = "<strong>" + col.title + "</strong> - " + col.value;
                             list.appendChild(item);
@@ -86,6 +90,13 @@
                     });
 
                     return Object.keys(data).length ? list : "";
+                },
+                rowFormatter:function(row){
+                    var data = row.getData();
+
+                    if(empty_text(data.original_title) && empty_text(data.bpm_ratio) && empty_text(data.html_comment)){
+                        data.getCells()[0].getElement().innerHTML = "";
+                    }
                 }
             });
 

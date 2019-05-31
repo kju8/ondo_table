@@ -78,7 +78,7 @@
                     var list = document.createElement("ul");
 
                     data.forEach(function(col){
-                        if(col.value && String(col.value).replace(/&nbsp;/g ,' ').match(/\S/g)){
+                        if(col.value && String(col.value).replace(/&nbsp;|&nbsp/g ,' ').match(/\S/g)){
                             let item = document.createElement("li");
                             item.innerHTML = "<strong>" + col.title + "</strong> - " + col.value;
                             list.appendChild(item);

@@ -78,9 +78,9 @@
                     var list = document.createElement("ul");
 
                     data.forEach(function(col){
+                        col.value.replace( /&nbsp;/g , ' ' );
                         if(col.value && col.value.match(/\S/g)){
                             let item = document.createElement("li");
-                            console.log(col.value);
                             item.innerHTML = "<strong>" + col.title + "</strong> - " + col.value;
                             list.appendChild(item);
                         }

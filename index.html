@@ -44,7 +44,7 @@
                             return `<a href="http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=${md5}" target="_blank">${value}</a>`
                         },
                     },
-                    { title: "Artist", field: "artist", formatter:"textarea", minWidth: 100, headerSort:false, resizable: false,
+                    { title: "Artist", field: "artist", minWidth: 100, headerSort:false, resizable: false,
                         formatter: function(cell, formatterParams, onRendered) {
                             cell.getElement().style.whiteSpace = "pre-wrap";
                             const value = cell.getValue();
@@ -56,7 +56,7 @@
                             return value;
                         },
                     },
-                    { title: "Pattern", field: "name_diff", formatter:"textarea", minWidth: 100, headerSort:false, resizable: false,
+                    { title: "OND-ize", field: "name_diff", formatter:"textarea", minWidth: 100, headerSort:false, resizable: false,
                         formatter: function(cell, formatterParams, onRendered) {
                             cell.getElement().style.whiteSpace = "pre-wrap";
                             const value = cell.getValue();
@@ -77,7 +77,7 @@
                     var list = document.createElement("ul");
 
                     data.forEach(function(col){
-                        if(col.value != "" && col.value != undefined){
+                        if(col.value && col.value.match(/\S/g)){
                             let item = document.createElement("li");
                             item.innerHTML = "<strong>" + col.title + "</strong> - " + col.value;
                             list.appendChild(item);

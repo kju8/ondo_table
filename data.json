@@ -1,9 +1,9 @@
 [
   {
     "artist": "ZUN (Arr.sun3)",
-    "comment": "原曲 Ancient Memory\nBPM比　1:2",
+    "comment": "原曲 Ancient Memory\nBPM比 2:1",
     "original_title": "Ancient Memory",
-    "bpm_ratio": "1:2",
+    "bpm_ratio": "2:1",
     "level": "1",
     "lr2_bmsid": "120710",
     "md5": "243ff38f5a948d93e8eb0ab0fa323227",
@@ -14,9 +14,9 @@
   },
   {
     "artist": "SHIKI",
-    "comment": "原曲 BABYLON\nBPM比　1:2",
+    "comment": "原曲 BABYLON\nBPM比 2:1",
     "original_title": "BABYLON",
-    "bpm_ratio": "1:2",
+    "bpm_ratio": "2:1",
     "level": "1",
     "lr2_bmsid": "121068",
     "md5": "c4db86f5d95719c49992b2c5745b76be",
@@ -28,7 +28,6 @@
   {
     "artist": "oxygen",
     "comment": "BPM比 約2.46:1",
-    "original_title": "Cable boy",
     "bpm_ratio": "約2.46:1",
     "level": "1",
     "lr2_bmsid": "11284",
@@ -40,7 +39,9 @@
   },
   {
     "artist": "knot",
-    "comment": "",
+    "comment": "原曲 cold planet\nBPM比　2:1",
+    "original_title": "cold planet",
+    "bpm_ratio": "2:1",
     "level": "1",
     "lr2_bmsid": "120796",
     "md5": "758e6ba8ebaf149c76c56c2bfcf0d089",
@@ -51,7 +52,9 @@
   },
   {
     "artist": "SHIKI",
-    "comment": "",
+    "comment": "原曲 Digitalic Rain\nBPM比　2:1",
+    "original_title": "Digitalic Rain",
+    "bpm_ratio": "2:1",
     "level": "1",
     "lr2_bmsid": "101149",
     "md5": "ee3453fe7840d9674141ae019524b1e5",
@@ -994,5 +997,32 @@
     "title": "自強號音頭",
     "url": "http://manbow.nothing.sh/event/event.cgi?action=More_def&num=395&event=88",
     "url_diff": "http://absolute.pv.land.to/uploader/src/up7077.zip"
+  },
+  {
+    "artist": "痛男次郎",
+    "comment": "",
+    "level": "メモ",
+    "name_diff": "平成",
+    "title": "新元号音頭[令和]",
+    "url": "http://manbow.nothing.sh/event/event.cgi?action=More_def&num=395&event=88",
+    "url_diff": "http://gnqg.rosx.net/upload/upload.cgi?get=02992"
+  },
+  {
+    "artist": "TRIAL",
+    "comment": "",
+    "level": "メモ",
+    "name_diff": "？",
+    "title": "G-SHOCK音頭",
+    "url": "",
+    "url_diff": "http://nekokan.dyndns.info/~otlovers/bin/pforum/file/15034-1.zip"
+  },
+  {
+    "artist": "off-beat",
+    "comment": "",
+    "level": "メモ",
+    "name_diff": "無意味さん",
+    "title": "850",
+    "url": "",
+    "url_diff": ""
   }
 ]

@@ -79,7 +79,7 @@
                 ],
                 responsiveLayoutCollapseFormatter:function(data){
                     //data - an array of objects containing the column title and value for each cell
-                    var list = document.createElement("ul");
+                    let list = document.createElement("ul");
 
                     data.forEach(function(col){
                         if(!empty_text(col.value)){
@@ -92,12 +92,24 @@
                     return Object.keys(data).length ? list : "";
                 },
                 rowFormatter:function(row){
-                    var data = row.getData();
+                    let data = row.getData();
 
                     if(empty_text(data.original_title) && empty_text(data.bpm_ratio) && empty_text(data.html_comment)){
                         console.log("check Through");
                         row.getCell("collapse").getElement().innerHTML = "";
                     }
+                },
+                columnResized:function(column){
+                    let rows = column.getTable().getRows();
+                    rows.forEach(function(row){
+                        row.normalizeHeight();
+                    });
+                },
+                groupClick:function(e, group){
+                    group.toggle();
+                },
+                rowClick:function(e, row){
+                    if(row.getCell("collapse").getElement().innerHTML) row.treeToggle();
                 }
             });
 

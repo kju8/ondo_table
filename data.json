@@ -27,7 +27,8 @@
   },
   {
     "artist": "oxygen",
-    "comment": "BPM比 約2.46:1",
+    "comment": "原曲 Cable boy\nBPM比 約2.46:1",
+    "original_title": "Cable boy",
     "bpm_ratio": "約2.46:1",
     "level": "1",
     "lr2_bmsid": "11284",
@@ -47,7 +48,7 @@
     "md5": "758e6ba8ebaf149c76c56c2bfcf0d089",
     "name_diff": "j.pami",
     "title": "condold planet (NOMAL)",
-    "url": "",
+    "url": "http://web.archive.org/web/20071210121539/http://www.geocities.jp/panda_bms/cold_planet.zip",
     "url_diff": "http://lunatic8192alice.web.fc2.com/ondosabun/condold.zip"
   },
   {
@@ -489,7 +490,7 @@
     "md5": "a5a959547250efbab45a7921699acd06",
     "name_diff": "j.pami",
     "title": "condold planet (HYPER)",
-    "url": "",
+    "url": "http://web.archive.org/web/20071210121539/http://www.geocities.jp/panda_bms/cold_planet.zip",
     "url_diff": "http://lunatic8192alice.web.fc2.com/ondosabun/condoldhyper.zip"
   },
   {
@@ -997,32 +998,5 @@
     "title": "自強號音頭",
     "url": "http://manbow.nothing.sh/event/event.cgi?action=More_def&num=395&event=88",
     "url_diff": "http://absolute.pv.land.to/uploader/src/up7077.zip"
-  },
-  {
-    "artist": "痛男次郎",
-    "comment": "",
-    "level": "メモ",
-    "name_diff": "平成",
-    "title": "新元号音頭[令和]",
-    "url": "http://manbow.nothing.sh/event/event.cgi?action=More_def&num=395&event=88",
-    "url_diff": "http://gnqg.rosx.net/upload/upload.cgi?get=02992"
-  },
-  {
-    "artist": "TRIAL",
-    "comment": "",
-    "level": "メモ",
-    "name_diff": "？",
-    "title": "G-SHOCK音頭",
-    "url": "",
-    "url_diff": "http://nekokan.dyndns.info/~otlovers/bin/pforum/file/15034-1.zip"
-  },
-  {
-    "artist": "off-beat",
-    "comment": "",
-    "level": "メモ",
-    "name_diff": "無意味さん",
-    "title": "850",
-    "url": "",
-    "url_diff": ""
   }
 ]

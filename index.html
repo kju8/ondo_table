@@ -34,7 +34,7 @@
                     return `<span>${header.symbol}${value} (${count} pattern)</span>`;
                 },
                 columns: [
-                    {formatter:"responsiveCollapse", width:30, minWidth:30, align:"center", resizable:false, headerSort:false},
+                    {formatter:"responsiveCollapse", field:"collapse", width:30, minWidth:30, align:"center", resizable:false, headerSort:false},
                     { title: "Level", field: "level", width: 100, resizable: false,
                         formatter: function(cell, formatterParams, onRendered) {
                             return header.symbol + cell.getValue();
@@ -95,7 +95,7 @@
                     var data = row.getData();
 
                     if(empty_text(data.original_title) && empty_text(data.bpm_ratio) && empty_text(data.html_comment)){
-                        data.getCells()[0].getElement().innerHTML = "";
+                        data.getCell("collapse").getElement().innerHTML = "";
                     }
                 }
             });
